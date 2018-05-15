@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression Suite" verbose="1" parallel="tests" thread-count="3">
+    <parameter name="report.config" value="src/main/resources/extent-config.xml" />
+    <listeners>
+        <listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter" />
+    </listeners>
+    <test name="Login">
+        <classes>
+            <class name="test.LoginTest"/>
+        </classes>
+    </test>
+</suite>
